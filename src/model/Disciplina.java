@@ -5,7 +5,7 @@ public class Disciplina {
 	private int cod;
 	private String nome;
 	private String dia;
-	private int horario;
+	private int horario;         //CRIAÇÃO DA CLASSE/OBJETO DISCPLINA, COM OS ATRIBUTOS, GETTERS E SETTERS
 	private int qteHoras;
 	private int codCurso;
 	
