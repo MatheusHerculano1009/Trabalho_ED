@@ -15,6 +15,7 @@ public class Disciplina {
 		this.dia = dia;
 		this.horario = horario;
 		this.qteHoras = qteHoras;
+		this.codCurso = codCurso;
 	}
 	
 	public int getCod() {
