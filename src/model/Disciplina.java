@@ -9,13 +9,8 @@ public class Disciplina {
 	private int qteHoras;
 	private int codCurso;
 	
-	public Disciplina(int cod, String nome, String dia, int horario, int qteHoras, int codCurso) {
-		this.cod = cod;
-		this.nome = nome;
-		this.dia = dia;
-		this.horario = horario;
-		this.qteHoras = qteHoras;
-		this.codCurso = codCurso;
+	public Disciplina() {
+		super();
 	}
 	
 	public int getCod() {
@@ -62,6 +57,10 @@ public class Disciplina {
 		return codCurso;
 	}
 	
+	public void setCodCurso(int codCurso) {
+		this.codCurso = codCurso;	
+	}
+	
 	public String toString() {
 		return "Disciplina [cod=" + cod + ", nome=" + nome + ", dia=" + dia + ", horario=" + horario + ", qteHoras="
 				+ qteHoras + ", codCurso=" + codCurso + ", getCod()=" + getCod() + ", getNome()=" + getNome()
@@ -69,16 +68,5 @@ public class Disciplina {
 				+ ", getCodCurso()=" + getCodCurso() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
 				+ ", toString()=" + super.toString() + "]";
 	}
-
-	public void setCodCurso(int codCurso) {
-		this.codCurso = codCurso;
-		
-		
-		
-		
-	}
-
 	
-	
-
 }
