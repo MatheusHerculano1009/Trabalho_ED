@@ -2,7 +2,7 @@ package model;
 
 public class Professor {
 	
-	private int cpf;
+	private String cpf;
 	private String nome; 						//CRIAÇÃO DA CLASSE/OBJETO PROFESSOR, COM OS ATRIBUTOS, GETTERS E SETTERS
 	private String area;
 	private int pontos;
@@ -11,11 +11,11 @@ public class Professor {
 		super();
 	}
 	
-	public int getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(int cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 

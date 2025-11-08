@@ -2,7 +2,7 @@ package model;
 
 public class Curso {
 
-	private int cod;
+	private String cod;
 	private String nome;                   //CRIAÇÃO DA CLASSE/OBJETO CURSO, COM OS ATRIBUTOS, GETTERS E SETTERS
 	private String area;
 
@@ -10,11 +10,11 @@ public class Curso {
 		super();
 	}
 	
-	public int getCod() {
+	public String getCod() {
 		return cod;
 	}
 
-	public void setCod(int cod) {
+	public void setCod(String cod) {
 		this.cod = cod;
 	}
 
