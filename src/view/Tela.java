@@ -18,6 +18,7 @@ import javax.swing.border.EmptyBorder;
 import controller.CursoController;
 import controller.DisciplinaController;
 import controller.ProfessorController;
+import javax.swing.JComboBox;
 
 public class Tela extends JFrame {
 
@@ -30,6 +31,7 @@ public class Tela extends JFrame {
 	private JTextField tfDisciplinaQteHoras;
 	private JTextField tfDisciplinaCodCurso;
 	private JTextField tfDisciplinaBuscar;
+	private JTextArea taDisciplina;
 	private JTextField tfProfessorNome;
 	private JTextField tfProfessorCPF;
 	private JTextField tfProfessorArea;
@@ -39,6 +41,10 @@ public class Tela extends JFrame {
 	private JTextField tfCursoCod;
 	private JTextField tfCursoArea;
 	private JTextField tfCursoBuscar;
+	private JTextField tfInscricaoCPF;
+	private JTextField tfInscricaoCodDisciplina;
+	private JTextField tfInscricaoCodProcesso;
+	private JTextField tfBuscaInscricao;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -75,111 +81,122 @@ public class Tela extends JFrame {
 		
 		JLabel lblDisciplinaCod = new JLabel("Código");
 		lblDisciplinaCod.setForeground(new Color(178, 0, 0));
-		lblDisciplinaCod.setBounds(10, 72, 86, 38);
+		lblDisciplinaCod.setBounds(10, 121, 86, 38);
 		lblDisciplinaCod.setFont(new Font("Century Gothic", Font.BOLD, 20));
 		tabDisciplina.add(lblDisciplinaCod);
 		
 		JLabel lblDisciplinaNome = new JLabel("Nome");
 		lblDisciplinaNome.setForeground(new Color(178, 0, 0));
-		lblDisciplinaNome.setBounds(10, 122, 86, 38);
+		lblDisciplinaNome.setBounds(10, 72, 86, 38);
 		lblDisciplinaNome.setFont(new Font("Century Gothic", Font.BOLD, 20));
 		tabDisciplina.add(lblDisciplinaNome);
 		
 		JLabel lblDisciplinaDia = new JLabel("Dia");
 		lblDisciplinaDia.setForeground(new Color(178, 0, 0));
-		lblDisciplinaDia.setBounds(213, 72, 46, 38);
+		lblDisciplinaDia.setBounds(10, 170, 46, 38);
 		lblDisciplinaDia.setFont(new Font("Century Gothic", Font.BOLD, 20));
 		tabDisciplina.add(lblDisciplinaDia);
 		
 		JLabel lblDisciplinaHorario = new JLabel("Horário");
 		lblDisciplinaHorario.setForeground(new Color(178, 0, 0));
-		lblDisciplinaHorario.setBounds(413, 72, 86, 38);
+		lblDisciplinaHorario.setBounds(10, 219, 86, 38);
 		lblDisciplinaHorario.setFont(new Font("Century Gothic", Font.BOLD, 20));
 		tabDisciplina.add(lblDisciplinaHorario);
 		
 		JLabel lblDisciplinaqteHoras = new JLabel("<html>Carga<br>Horária<html>");
 		lblDisciplinaqteHoras.setForeground(new Color(178, 0, 0));
-		lblDisciplinaqteHoras.setBounds(10, 171, 80, 64);
+		lblDisciplinaqteHoras.setBounds(10, 268, 80, 64);
 		lblDisciplinaqteHoras.setFont(new Font("Century Gothic", Font.BOLD, 20));
 		tabDisciplina.add(lblDisciplinaqteHoras);
 		
 		JLabel lblDisciplinacodCurso = new JLabel("<html>Cód. do<br>Curso<html>");
 		lblDisciplinacodCurso.setForeground(new Color(178, 0, 0));
-		lblDisciplinacodCurso.setBounds(336, 171, 80, 64);
+		lblDisciplinacodCurso.setBounds(10, 327, 80, 64);
 		lblDisciplinacodCurso.setFont(new Font("Century Gothic", Font.BOLD, 20));
 		tabDisciplina.add(lblDisciplinacodCurso);
 		
 		tfDisciplinaCod = new JTextField();
-		tfDisciplinaCod.setBounds(96, 75, 99, 33);
+		tfDisciplinaCod.setBounds(94, 124, 197, 33);
 		tfDisciplinaCod.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		tabDisciplina.add(tfDisciplinaCod);
 		tfDisciplinaCod.setColumns(10);
 		
 		tfDisciplinaNome = new JTextField();
-		tfDisciplinaNome.setBounds(96, 121, 493, 33);
+		tfDisciplinaNome.setBounds(94, 75, 197, 33);
 		tfDisciplinaNome.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		tfDisciplinaNome.setColumns(10);
 		tabDisciplina.add(tfDisciplinaNome);
 		
 		tfDisciplinaDia = new JTextField();
-		tfDisciplinaDia.setBounds(263, 75, 140, 33);
+		tfDisciplinaDia.setBounds(94, 170, 197, 33);
 		tfDisciplinaDia.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		tfDisciplinaDia.setColumns(10);
 		tabDisciplina.add(tfDisciplinaDia);
 		
 		tfDisciplinaHorario = new JTextField();
-		tfDisciplinaHorario.setBounds(499, 75, 90, 33);
+		tfDisciplinaHorario.setBounds(94, 222, 197, 33);
 		tfDisciplinaHorario.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		tfDisciplinaHorario.setColumns(10);
 		tabDisciplina.add(tfDisciplinaHorario);
 		
 		tfDisciplinaQteHoras = new JTextField();
-		tfDisciplinaQteHoras.setBounds(96, 187, 230, 33);
+		tfDisciplinaQteHoras.setBounds(94, 288, 197, 33);
 		tfDisciplinaQteHoras.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		tfDisciplinaQteHoras.setColumns(10);
 		tabDisciplina.add(tfDisciplinaQteHoras);
 		
-		tfDisciplinaCodCurso = new JTextField();
-		tfDisciplinaCodCurso.setBounds(426, 187, 163, 33);
-		tfDisciplinaCodCurso.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		tfDisciplinaCodCurso.setColumns(10);
-		tabDisciplina.add(tfDisciplinaCodCurso);
-		
 		JLabel lblDisciplina = new JLabel("DISCIPLINA");
 		lblDisciplina.setForeground(new Color(178, 0, 0));
-		lblDisciplina.setBounds(10, 11, 185, 50);
+		lblDisciplina.setBounds(10, 11, 173, 50);
 		lblDisciplina.setFont(new Font("Century Gothic", Font.BOLD, 30));
 		tabDisciplina.add(lblDisciplina);
-		
-		JButton btnDisciplinaSalvar = new JButton("SALVAR");
-		btnDisciplinaSalvar.setForeground(new Color(255, 255, 255));
-		btnDisciplinaSalvar.setBackground(new Color(178, 0, 0));
-		btnDisciplinaSalvar.setFont(new Font("Century Gothic", Font.BOLD, 15));
-		btnDisciplinaSalvar.setBounds(490, 11, 99, 38);
-		tabDisciplina.add(btnDisciplinaSalvar);
 		
 		JButton btnDisciplinaBuscar = new JButton("BUSCAR");
 		btnDisciplinaBuscar.setForeground(new Color(255, 255, 255));
 		btnDisciplinaBuscar.setBackground(new Color(178, 0, 0));
 		btnDisciplinaBuscar.setFont(new Font("Century Gothic", Font.BOLD, 10));
-		btnDisciplinaBuscar.setBounds(490, 250, 99, 35);
+		btnDisciplinaBuscar.setBounds(491, 72, 99, 33);
 		tabDisciplina.add(btnDisciplinaBuscar);
 				
 		tfDisciplinaBuscar = new JTextField();
 		tfDisciplinaBuscar.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		tfDisciplinaBuscar.setColumns(10);
-		tfDisciplinaBuscar.setBounds(246, 252, 230, 33);
+		tfDisciplinaBuscar.setBounds(301, 75, 180, 33);
 		tabDisciplina.add(tfDisciplinaBuscar);
 		
-		DisciplinaController dC = new DisciplinaController(tfDisciplinaCod, tfDisciplinaNome, tfDisciplinaDia, tfDisciplinaHorario,
-				tfDisciplinaQteHoras, tfDisciplinaCodCurso);
-		
 		JScrollPane scrollPane_1 = new JScrollPane();
-		scrollPane_1.setBounds(10, 296, 579, 84);
+		scrollPane_1.setBounds(302, 116, 287, 264);
 		tabDisciplina.add(scrollPane_1);
 		
-		JTextArea taDisciplina = new JTextArea();
-		scrollPane_1.setViewportView(taDisciplina);
+		JTextArea taDisciplina_1 = new JTextArea();
+		scrollPane_1.setViewportView(taDisciplina_1);
+		taDisciplina_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		
+		JButton btnDisciplinaExcluir = new JButton("EXCLUIR");
+		btnDisciplinaExcluir.setBounds(303, 23, 99, 38);
+		tabDisciplina.add(btnDisciplinaExcluir);
+		btnDisciplinaExcluir.setForeground(Color.WHITE);
+		btnDisciplinaExcluir.setFont(new Font("Century Gothic", Font.BOLD, 13));
+		btnDisciplinaExcluir.setBackground(new Color(64, 64, 64));
+		
+		JButton btnDisciplinaSalvar = new JButton("SALVAR");
+		btnDisciplinaSalvar.setBounds(490, 23, 99, 38);
+		tabDisciplina.add(btnDisciplinaSalvar);
+		btnDisciplinaSalvar.setForeground(new Color(255, 255, 255));
+		btnDisciplinaSalvar.setBackground(new Color(178, 0, 0));
+		btnDisciplinaSalvar.setFont(new Font("Century Gothic", Font.BOLD, 13));
+		
+		tfDisciplinaCodCurso = new JTextField();
+		tfDisciplinaCodCurso.setBounds(94, 347, 197, 33);
+		tfDisciplinaCodCurso.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		tfDisciplinaCodCurso.setColumns(10);
+		tabDisciplina.add(tfDisciplinaCodCurso);
+		
+		DisciplinaController dC = new DisciplinaController(tfDisciplinaCod, tfDisciplinaNome, tfDisciplinaDia, tfDisciplinaHorario,
+						tfDisciplinaQteHoras, tfDisciplinaCodCurso, tfDisciplinaBuscar, taDisciplina_1);
+		
+		btnDisciplinaSalvar.addActionListener(dC);
+		btnDisciplinaBuscar.addActionListener(dC);
 		
 		JPanel tabProfessor = new JPanel();
 		tabProfessor.setLayout(null);
@@ -267,20 +284,25 @@ public class Tela extends JFrame {
 		scrollPane.setViewportView(taProfessor);
 		
 		tfProfessorBuscar = new JTextField();
+		tfProfessorBuscar.setToolTipText("Insira o CPF");
 		tfProfessorBuscar.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		tfProfessorBuscar.setColumns(10);
 		tfProfessorBuscar.setBounds(250, 165, 230, 33);
 		tabProfessor.add(tfProfessorBuscar);
 		
-		btnDisciplinaSalvar.addActionListener(dC);
-		btnDisciplinaBuscar.addActionListener(dC);
+		ProfessorController pC = new ProfessorController(tfProfessorNome, tfProfessorCPF, tfProfessorArea, tfProfessorPontos, tfProfessorBuscar, taProfessor);
 		
-		ProfessorController pC = new ProfessorController(tfProfessorNome, tfProfessorCPF, tfProfessorArea, tfProfessorPontos);
+		JButton btnProfessorExcluir = new JButton("EXCLUIR");
+		btnProfessorExcluir.setForeground(Color.WHITE);
+		btnProfessorExcluir.setFont(new Font("Century Gothic", Font.BOLD, 10));
+		btnProfessorExcluir.setBackground(new Color(0, 0, 0));
+		btnProfessorExcluir.setBounds(10, 165, 99, 35);
+		tabProfessor.add(btnProfessorExcluir);
 		
 		JPanel tabCurso = new JPanel();
 		tabCurso.setToolTipText("Cadastro de professores");
 		tabCurso.setBackground(UIManager.getColor("Button.background"));
-		tabbedPane.addTab("Curso", null, tabCurso, "Cadastro de Cursos");
+		tabbedPane.addTab("Curso", null, tabCurso, null);
 		tabCurso.setLayout(null);
 		
 		JLabel lblCursoNome = new JLabel("Nome");
@@ -347,12 +369,11 @@ public class Tela extends JFrame {
 		tabCurso.add(tfCursoArea);
 		
 		tfCursoBuscar = new JTextField();
+		tfCursoBuscar.setToolTipText("Insira o cód. do curso");
 		tfCursoBuscar.setBounds(250, 165, 230, 33);
 		tfCursoBuscar.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		tfCursoBuscar.setColumns(10);
 		tabCurso.add(tfCursoBuscar);
-		
-		CursoController cC = new CursoController(tfCursoCod, tfCursoNome, tfCursoArea);
 		
 		JScrollPane scrollPane_2 = new JScrollPane();
 		scrollPane_2.setBounds(10, 209, 579, 171);
@@ -360,6 +381,88 @@ public class Tela extends JFrame {
 		
 		JTextArea taCurso = new JTextArea();
 		scrollPane_2.setViewportView(taCurso);
+		
+		CursoController cC = new CursoController(tfCursoCod, tfCursoNome, tfCursoArea, tfCursoBuscar, taCurso);
+		
+		JPanel tabInscricao = new JPanel();
+		tabbedPane.addTab("Inscrição", null, tabInscricao, "Inscrição para disciplina");
+		tabInscricao.setLayout(null);
+		
+		JLabel lblInscricao = new JLabel("INSCRIÇÃO");
+		lblInscricao.setForeground(new Color(178, 0, 0));
+		lblInscricao.setFont(new Font("Century Gothic", Font.BOLD, 30));
+		lblInscricao.setBounds(10, 11, 185, 50);
+		tabInscricao.add(lblInscricao);
+		
+		JLabel lblInscricaoCPF = new JLabel("CPF");
+		lblInscricaoCPF.setForeground(new Color(178, 0, 0));
+		lblInscricaoCPF.setFont(new Font("Century Gothic", Font.BOLD, 20));
+		lblInscricaoCPF.setBounds(10, 72, 86, 38);
+		tabInscricao.add(lblInscricaoCPF);
+		
+		JLabel lblInsricaoCodDisciplina = new JLabel("<html>Cód.<br>da Disciplina<html>");
+		lblInsricaoCodDisciplina.setForeground(new Color(178, 0, 0));
+		lblInsricaoCodDisciplina.setFont(new Font("Century Gothic", Font.BOLD, 20));
+		lblInsricaoCodDisciplina.setBounds(10, 173, 102, 87);
+		tabInscricao.add(lblInsricaoCodDisciplina);
+		
+		JLabel lblInscricaoCodProcesso = new JLabel("<html>Cód.<br>do Processo<html>");
+		lblInscricaoCodProcesso.setForeground(new Color(178, 0, 0));
+		lblInscricaoCodProcesso.setFont(new Font("Century Gothic", Font.BOLD, 20));
+		lblInscricaoCodProcesso.setBounds(10, 293, 102, 87);
+		tabInscricao.add(lblInscricaoCodProcesso);
+		
+		tfInscricaoCPF = new JTextField();
+		tfInscricaoCPF.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		tfInscricaoCPF.setColumns(10);
+		tfInscricaoCPF.setBounds(118, 75, 185, 33);
+		tabInscricao.add(tfInscricaoCPF);
+		
+		tfInscricaoCodDisciplina = new JTextField();
+		tfInscricaoCodDisciplina.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		tfInscricaoCodDisciplina.setColumns(10);
+		tfInscricaoCodDisciplina.setBounds(118, 198, 185, 33);
+		tabInscricao.add(tfInscricaoCodDisciplina);
+		
+		tfInscricaoCodProcesso = new JTextField();
+		tfInscricaoCodProcesso.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		tfInscricaoCodProcesso.setColumns(10);
+		tfInscricaoCodProcesso.setBounds(118, 319, 185, 33);
+		tabInscricao.add(tfInscricaoCodProcesso);
+		
+		tfBuscaInscricao = new JTextField();
+		tfBuscaInscricao.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		tfBuscaInscricao.setColumns(10);
+		tfBuscaInscricao.setBounds(315, 75, 165, 33);
+		tabInscricao.add(tfBuscaInscricao);
+		
+		JButton btnInscricaoBuscar = new JButton("BUSCAR");
+		btnInscricaoBuscar.setForeground(Color.WHITE);
+		btnInscricaoBuscar.setFont(new Font("Century Gothic", Font.BOLD, 10));
+		btnInscricaoBuscar.setBackground(new Color(178, 0, 0));
+		btnInscricaoBuscar.setBounds(490, 77, 99, 33);
+		tabInscricao.add(btnInscricaoBuscar);
+		
+		JButton btnInscricaoExcluir = new JButton("EXCLUIR");
+		btnInscricaoExcluir.setForeground(Color.WHITE);
+		btnInscricaoExcluir.setFont(new Font("Century Gothic", Font.BOLD, 13));
+		btnInscricaoExcluir.setBackground(Color.DARK_GRAY);
+		btnInscricaoExcluir.setBounds(315, 11, 99, 38);
+		tabInscricao.add(btnInscricaoExcluir);
+		
+		JButton btnInscricaoSalvar = new JButton("SALVAR");
+		btnInscricaoSalvar.setForeground(Color.WHITE);
+		btnInscricaoSalvar.setFont(new Font("Century Gothic", Font.BOLD, 13));
+		btnInscricaoSalvar.setBackground(new Color(178, 0, 0));
+		btnInscricaoSalvar.setBounds(490, 11, 99, 38);
+		tabInscricao.add(btnInscricaoSalvar);
+		
+		JScrollPane scrollPane_3 = new JScrollPane();
+		scrollPane_3.setBounds(315, 119, 274, 261);
+		tabInscricao.add(scrollPane_3);
+		
+		JTextArea taInscricao = new JTextArea();
+		scrollPane_3.setViewportView(taInscricao);
 		
 		btnCursoSalvar.addActionListener(cC);
 		btnCursoBuscar.addActionListener(cC);
