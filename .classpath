@@ -8,5 +8,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="Biblioteca/LibListaGeneric.jar"/>
 	<classpathentry kind="lib" path="Biblioteca/FilaGeneric.jar"/>
+	<classpathentry kind="lib" path="Biblioteca/QuickSort_Matheus.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

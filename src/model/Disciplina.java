@@ -2,6 +2,7 @@ package model;
 
 public class Disciplina {
 	
+	private int codProcesso;
 	private String cod;
 	private String nome;
 	private String dia;
@@ -61,8 +62,16 @@ public class Disciplina {
 		this.codCurso = codCurso;	
 	}
 	
+	public int getCodProcesso() {
+		return codProcesso;
+	}
+
+	public void setCodProcesso(int codProcesso) {
+		this.codProcesso = codProcesso;
+	}
+	
 	public String toString() {
-		return cod+";"+nome+";"+dia+";"+horario+";"+qteHoras+";"+codCurso;
+		return cod+";"+nome+";"+dia+";"+horario+";"+qteHoras+";"+codCurso+";"+codProcesso;
 	}
 	
 }
