@@ -1,14 +1,14 @@
 package model;
 
 public class Inscricao {
-	
+
 	private String CPF;
 	private String codDisciplina;
 	private String codProcesso;
-	
+
 	public Inscricao() {
 	}
-	
+
 	public String getCPF() {
 		return CPF;
 	}
@@ -32,11 +32,10 @@ public class Inscricao {
 	public void setCodProcesso(String codProcesso) {
 		this.codProcesso = codProcesso;
 	}
-	
-	public String toString() {
-		return CPF+";"+codDisciplina+";"+codProcesso;
-		
-	}
 
+	public String toString() {
+		return CPF + ";" + codDisciplina + ";" + codProcesso;
+
+	}
 
 }

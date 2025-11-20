@@ -1,16 +1,16 @@
 package model;
 
 public class Professor {
-	
+
 	private String cpf;
-	private String nome; 						//CRIAÇÃO DA CLASSE/OBJETO PROFESSOR, COM OS ATRIBUTOS, GETTERS E SETTERS
+	private String nome;
 	private String area;
 	private int pontos;
 
 	public Professor() {
 		super();
 	}
-	
+
 	public String getCpf() {
 		return cpf;
 	}
@@ -42,10 +42,10 @@ public class Professor {
 	public void setPontos(int pontos) {
 		this.pontos = pontos;
 	}
-	
+
 	@Override
 	public String toString() {
-		return nome+";"+cpf+";"+area+";"+pontos;
+		return nome + ";" + cpf + ";" + area + ";" + pontos;
 	}
 
 }

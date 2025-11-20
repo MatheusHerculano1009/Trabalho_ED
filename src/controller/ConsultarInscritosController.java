@@ -19,14 +19,14 @@ public class ConsultarInscritosController implements ActionListener {
 
 	private JTextField tfBuscar;
 	private JTextField tfNomeDisciplina;
-	private JTextArea taSaida;
+	private JTextArea taConsultarInscritos;
 	String path = System.getProperty("user.home") + File.separator + "ContratacaoDocentes";
 	File arq = new File(path, "inscricoes.csv");
 
 	public ConsultarInscritosController(JTextField tfBuscar, JTextField tfNomeDisciplina, JTextArea taSaida) {
 		this.tfBuscar = tfBuscar;
 		this.tfNomeDisciplina = tfNomeDisciplina;
-		this.taSaida = taSaida;
+		this.taConsultarInscritos = taSaida;
 	}
 
 	@Override
@@ -34,34 +34,26 @@ public class ConsultarInscritosController implements ActionListener {
 		try {
 			consultar();
 		} catch (Exception ex) {
-			taSaida.setText("ERRO: " + ex.getMessage());
+			taConsultarInscritos.setText("ERRO: " + ex.getMessage());
 			ex.printStackTrace();
 		}
 	}
 
 	private void consultar() throws Exception {
 		String codDisciplina = tfBuscar.getText();
-		if (codDisciplina.isEmpty()) {
-			taSaida.setText("Digite um código de disciplina para buscar.");
-			return;
-		}
-
 		Disciplina d = DisciplinaController.controladorPrincipal.disciplinaExiste(codDisciplina);
 		if (d == null) {
-			taSaida.setText("Disciplina com código " + codDisciplina + " não encontrada.");
+			taConsultarInscritos.setText("Disciplina com código " + codDisciplina + " não encontrada.");
 			tfNomeDisciplina.setText("");
 			return;
 		}
-		tfNomeDisciplina.setText(d.getNome()); 
-		taSaida.setText(""); 
-
-		Lista<Inscricao> todasInscricoes = carregarInscricoes();
+		tfNomeDisciplina.setText(d.getNome());
+		taConsultarInscritos.setText("");
+		Lista<Inscricao> inscricoes = carregarInscricoes();
 		Lista<Professor> professoresInscritos = new Lista<>();
-
-		int tamanho = todasInscricoes.size();
+		int tamanho = inscricoes.size();
 		for (int i = 0; i < tamanho; i++) {
-			Inscricao insc = todasInscricoes.get(i);
-			
+			Inscricao insc = inscricoes.get(i);
 			if (insc.getCodDisciplina().equals(codDisciplina)) {
 				Professor p = ProfessorController.controladorPrincipal.professorExiste(insc.getCPF());
 				if (p != null) {
@@ -73,9 +65,8 @@ public class ConsultarInscritosController implements ActionListener {
 				}
 			}
 		}
-
 		if (professoresInscritos.isEmpty()) {
-			taSaida.setText("Nenhum professor inscrito para esta disciplina.");
+			taConsultarInscritos.setText("Nenhum professor inscrito para esta disciplina.");
 			return;
 		}
 		bubbleSort(professoresInscritos);
@@ -110,20 +101,16 @@ public class ConsultarInscritosController implements ActionListener {
 	}
 
 	private void exibirProfessores(Lista<Professor> lista) throws Exception {
-		StringBuilder sb = new StringBuilder();
-		sb.append("Posição\tPontos\tNome\t\tCPF\t\tÁrea\n");
-		sb.append("------------------------------------------------------------------------------------------------------------------\n");
-
+		String linha = "";
 		int tamanho = lista.size();
 		for (int i = 0; i < tamanho; i++) {
 			Professor p = lista.get(i);
-			sb.append((i + 1) + "º\t");
-			sb.append(p.getPontos() + "\t");
-			sb.append(p.getNome() + "\t\t");
-			sb.append(p.getCpf() + "\t\t");
-			sb.append(p.getArea() + "\n");
+			linha += "Pontos: " + p.getPontos() + "\t";
+			linha += " | Nome: " + p.getNome() + "\t";
+			linha += " | CPF: " + p.getCpf() + "\t";
+			linha += " | Área: " + p.getArea() + "\n";
 		}
-		taSaida.setText(sb.toString());
+		taConsultarInscritos.setText(linha);
 	}
 
 	private void bubbleSort(Lista<Professor> lista) throws Exception {
@@ -134,9 +121,9 @@ public class ConsultarInscritosController implements ActionListener {
 				Professor p2 = lista.get(j + 1);
 				if (p1.getPontos() < p2.getPontos()) {
 					lista.remove(j + 1);
-					lista.remove(j);     
-					lista.add(p2, j);     
-					lista.add(p1, j + 1); 
+					lista.remove(j);
+					lista.add(p2, j);
+					lista.add(p1, j + 1);
 				}
 			}
 		}

@@ -3,13 +3,13 @@ package model;
 public class Curso {
 
 	private String cod;
-	private String nome;                   //CRIAÇÃO DA CLASSE/OBJETO CURSO, COM OS ATRIBUTOS, GETTERS E SETTERS
+	private String nome;
 	private String area;
 
 	public Curso() {
 		super();
 	}
-	
+
 	public String getCod() {
 		return cod;
 	}
@@ -33,10 +33,10 @@ public class Curso {
 	public void setArea(String area) {
 		this.area = area;
 	}
-	
+
 	@Override
 	public String toString() {
-		return cod+";"+nome+";"+area;
+		return cod + ";" + nome + ";" + area;
 	}
 
 }

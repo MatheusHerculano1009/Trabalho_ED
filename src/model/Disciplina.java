@@ -1,19 +1,19 @@
 package model;
 
 public class Disciplina {
-	
+
 	private int codProcesso;
 	private String cod;
 	private String nome;
 	private String dia;
-	private String horario;         //CRIAÇÃO DA CLASSE/OBJETO DISCPLINA, COM OS ATRIBUTOS, GETTERS E SETTERS
+	private String horario;
 	private int qteHoras;
 	private String codCurso;
-	
+
 	public Disciplina() {
 		super();
 	}
-	
+
 	public String getCod() {
 		return cod;
 	}
@@ -57,11 +57,11 @@ public class Disciplina {
 	public String getCodCurso() {
 		return codCurso;
 	}
-	
+
 	public void setCodCurso(String codCurso) {
-		this.codCurso = codCurso;	
+		this.codCurso = codCurso;
 	}
-	
+
 	public int getCodProcesso() {
 		return codProcesso;
 	}
@@ -69,9 +69,9 @@ public class Disciplina {
 	public void setCodProcesso(int codProcesso) {
 		this.codProcesso = codProcesso;
 	}
-	
+
 	public String toString() {
-		return cod+";"+nome+";"+dia+";"+horario+";"+qteHoras+";"+codCurso+";"+codProcesso;
+		return cod + ";" + nome + ";" + dia + ";" + horario + ";" + qteHoras + ";" + codCurso + ";" + codProcesso;
 	}
-	
+
 }
