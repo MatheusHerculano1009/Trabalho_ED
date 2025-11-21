@@ -81,46 +81,54 @@ public class Tela extends JFrame {
 		contentPane.add(tabbedPane);
 		
 			JPanel tabCurso = new JPanel();
-			tabCurso.setToolTipText("Cadastro de professores");
+			tabCurso.setToolTipText("Cadastro de cursos");
 			tabCurso.setBackground(UIManager.getColor("Button.background"));
 			tabbedPane.addTab("Curso", null, tabCurso, "Cadastro de cursos");
 			tabCurso.setLayout(null);
 			
-			JLabel lblCursoNome = new JLabel("Nome");
-			lblCursoNome.setBounds(10, 72, 86, 38);
+			JLabel lblCursoNome = new JLabel("Nome:");
+			lblCursoNome.setToolTipText("Digite o nome do Curso, sem acentuação.");
+			lblCursoNome.setBounds(20, 115, 60, 30);
 			lblCursoNome.setForeground(new Color(38, 75, 150));
-			lblCursoNome.setFont(new Font("Century Gothic", Font.BOLD, 20));
+			lblCursoNome.setFont(new Font("Segoe UI", Font.BOLD, 14));
 			tabCurso.add(lblCursoNome);
 			
 			tfCursoNome = new JTextField();
-			tfCursoNome.setBounds(96, 75, 493, 33);
-			tfCursoNome.setFont(new Font("Tahoma", Font.PLAIN, 20));
+			tfCursoNome.setBounds(80, 115, 510, 30);
+			tfCursoNome.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 			tfCursoNome.setColumns(10);
 			tabCurso.add(tfCursoNome);
 			
 			tfCursoCod = new JTextField();
-			tfCursoCod.setBounds(96, 121, 110, 33);
-			tfCursoCod.setFont(new Font("Tahoma", Font.PLAIN, 20));
+			tfCursoCod.setBounds(80, 70, 100, 30);
+			tfCursoCod.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 			tfCursoCod.setColumns(10);
 			tabCurso.add(tfCursoCod);
 			
-			JLabel lblCurso = new JLabel("CURSO");
-			lblCurso.setBounds(10, 11, 185, 50);
+			JLabel lblCurso = new JLabel("Gerenciar Cursos");
+			lblCurso.setBounds(20, 20, 250, 30);
 			lblCurso.setForeground(new Color(38, 75, 150));
-			lblCurso.setFont(new Font("Century Gothic", Font.BOLD, 30));
+			lblCurso.setFont(new Font("Segoe UI", Font.BOLD, 24));
 			tabCurso.add(lblCurso);
 			
+			JLabel lblCod = new JLabel("Código:");
+			lblCod.setToolTipText("Digite o código do Curso. Ex.(01)");
+			lblCod.setBounds(20, 70, 60, 30);
+			lblCod.setForeground(new Color(38, 75, 150));
+			lblCod.setFont(new Font("Segoe UI", Font.BOLD, 14));
+			tabCurso.add(lblCod);
+			
 			JButton btnCursoSalvar = new JButton("SALVAR");
-			btnCursoSalvar.setBounds(490, 11, 99, 38);
+			btnCursoSalvar.setBounds(480, 20, 110, 35);
 			btnCursoSalvar.setForeground(Color.WHITE);
-			btnCursoSalvar.setFont(new Font("Century Gothic", Font.BOLD, 15));
+			btnCursoSalvar.setFont(new Font("Segoe UI", Font.BOLD, 12));
 			btnCursoSalvar.setBackground(new Color(39, 179, 118));
 			tabCurso.add(btnCursoSalvar);
 			
 			JButton btnCursoBuscar = new JButton("BUSCAR");
-			btnCursoBuscar.setBounds(490, 163, 99, 35);
+			btnCursoBuscar.setBounds(480, 160, 110, 30);
 			btnCursoBuscar.setForeground(Color.WHITE);
-			btnCursoBuscar.setFont(new Font("Century Gothic", Font.BOLD, 10));
+			btnCursoBuscar.setFont(new Font("Segoe UI", Font.BOLD, 12));
 			btnCursoBuscar.setBackground(new Color(38, 75, 150));
 			tabCurso.add(btnCursoBuscar);
 			
@@ -128,45 +136,42 @@ public class Tela extends JFrame {
 			textArea_1_1.setBounds(584, 296, -419, 33);
 			tabCurso.add(textArea_1_1);
 			
-			JLabel lblCursoCod = new JLabel("Código");
-			lblCursoCod.setBounds(10, 120, 86, 38);
-			lblCursoCod.setForeground(new Color(38, 75, 150));
-			lblCursoCod.setFont(new Font("Century Gothic", Font.BOLD, 20));
-			tabCurso.add(lblCursoCod);
 			
-			JLabel lblCursoArea = new JLabel("Área");
-			lblCursoArea.setBounds(216, 118, 86, 38);
+			JLabel lblCursoArea = new JLabel("Área:");
+			lblCursoArea.setToolTipText("Digite a Área de atuação do seu Curso. Ex. (Tecnologia)");
+			lblCursoArea.setBounds(200, 70, 50, 30);
 			lblCursoArea.setForeground(new Color(38, 75, 150));
-			lblCursoArea.setFont(new Font("Century Gothic", Font.BOLD, 20));
+			lblCursoArea.setFont(new Font("Segoe UI", Font.BOLD, 14));
 			tabCurso.add(lblCursoArea);
 			
 			tfCursoArea = new JTextField();
-			tfCursoArea.setBounds(275, 119, 314, 33);
-			tfCursoArea.setFont(new Font("Tahoma", Font.PLAIN, 20));
+			tfCursoArea.setBounds(250, 70, 340, 30);
+			tfCursoArea.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 			tfCursoArea.setColumns(10);
 			tabCurso.add(tfCursoArea);
 			
 			tfCursoBuscar = new JTextField();
-			tfCursoBuscar.setToolTipText("Insira o cód. do curso");
-			tfCursoBuscar.setBounds(250, 165, 230, 33);
-			tfCursoBuscar.setFont(new Font("Tahoma", Font.PLAIN, 20));
+			tfCursoBuscar.setToolTipText("Insira o código do curso");
+			tfCursoBuscar.setBounds(140, 160, 330, 30);
+			tfCursoBuscar.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 			tfCursoBuscar.setColumns(10);
 			tabCurso.add(tfCursoBuscar);
 			
 			JScrollPane scrollPane_2 = new JScrollPane();
-			scrollPane_2.setBounds(10, 209, 579, 171);
+			scrollPane_2.setBounds(20, 205, 570, 180);
 			tabCurso.add(scrollPane_2);
 			
 			JTextArea taCurso = new JTextArea();
+			taCurso.setFont(new Font("Consolas", Font.PLAIN, 14));
 			scrollPane_2.setViewportView(taCurso);
 			
 			CursoController cC = new CursoController(tfCursoCod, tfCursoNome, tfCursoArea, tfCursoBuscar, taCurso);
 			
 			JButton btnCursoExcluir = new JButton("EXCLUIR");
 			btnCursoExcluir.setForeground(Color.WHITE);
-			btnCursoExcluir.setFont(new Font("Century Gothic", Font.BOLD, 13));
+			btnCursoExcluir.setFont(new Font("Segoe UI", Font.BOLD, 12));
 			btnCursoExcluir.setBackground(new Color(191, 33, 47));
-			btnCursoExcluir.setBounds(10, 165, 99, 34);
+			btnCursoExcluir.setBounds(20, 160, 110, 30);
 			tabCurso.add(btnCursoExcluir);
 			btnCursoSalvar.addActionListener(cC);
 			btnCursoBuscar.addActionListener(cC);
@@ -178,130 +183,139 @@ public class Tela extends JFrame {
 		tabbedPane.addTab("Disciplina", null, tabDisciplina, "Cadastro de Disciplinas");
 		tabDisciplina.setLayout(null);
 		
-		JLabel lblDisciplinaCod = new JLabel("<html>Cód. da<br>Disciplina<html>");
+		JLabel lblDisciplinaCod = new JLabel("Cód.Disc:");
+		lblDisciplinaCod.setToolTipText("Digite o Código da Disciplina. Ex.(01)");
 		lblDisciplinaCod.setForeground(new Color(38, 75, 150));
-		lblDisciplinaCod.setBounds(378, 53, 99, 57);
-		lblDisciplinaCod.setFont(new Font("Century Gothic", Font.BOLD, 20));
+		lblDisciplinaCod.setBounds(20, 70, 80, 30);
+		lblDisciplinaCod.setFont(new Font("Segoe UI", Font.BOLD, 14));
 		tabDisciplina.add(lblDisciplinaCod);
 		
-		JLabel lblDisciplinaNome = new JLabel("Nome");
+		JLabel lblDisciplinaNome = new JLabel("Nome:");
+		lblDisciplinaNome.setToolTipText("Digite o Nome da Disciplina. Ex.(Contabilidade)");
 		lblDisciplinaNome.setForeground(new Color(38, 75, 150));
-		lblDisciplinaNome.setBounds(10, 72, 86, 38);
-		lblDisciplinaNome.setFont(new Font("Century Gothic", Font.BOLD, 20));
+		lblDisciplinaNome.setBounds(190, 70, 50, 30);
+		lblDisciplinaNome.setFont(new Font("Segoe UI", Font.BOLD, 14));
 		tabDisciplina.add(lblDisciplinaNome);
 		
-		JLabel lblDisciplinaDia = new JLabel("Dia");
+		JLabel lblDisciplinaDia = new JLabel("Dia:");
+		lblDisciplinaDia.setToolTipText("Digite o Dia da Semana que será ministrada a Aula. Ex.(Segunda-Feira)");
 		lblDisciplinaDia.setForeground(new Color(38, 75, 150));
-		lblDisciplinaDia.setBounds(10, 124, 46, 38);
-		lblDisciplinaDia.setFont(new Font("Century Gothic", Font.BOLD, 20));
+		lblDisciplinaDia.setBounds(20, 115, 80, 30);
+		lblDisciplinaDia.setFont(new Font("Segoe UI", Font.BOLD, 14));
 		tabDisciplina.add(lblDisciplinaDia);
 		
-		JLabel lblDisciplinaHorario = new JLabel("Horário");
+		JLabel lblDisciplinaHorario = new JLabel("Horário:");
 		lblDisciplinaHorario.setForeground(new Color(38, 75, 150));
-		lblDisciplinaHorario.setBounds(10, 186, 86, 38);
-		lblDisciplinaHorario.setFont(new Font("Century Gothic", Font.BOLD, 20));
+		lblDisciplinaHorario.setToolTipText("Digite o Horário Inicial da Disciplina. Ex.(19:20)");
+		lblDisciplinaHorario.setBounds(300, 115, 60, 30);
+		lblDisciplinaHorario.setFont(new Font("Segoe UI", Font.BOLD, 14));
 		tabDisciplina.add(lblDisciplinaHorario);
 		
-		JLabel lblDisciplinaqteHoras = new JLabel("<html>Carga<br>Horária<html>");
+		JLabel lblDisciplinaqteHoras = new JLabel("Carga Hr:");
+		lblDisciplinaqteHoras.setToolTipText("Digite a Carga Horária Diaria da Disciplina. Ex.(4)");
 		lblDisciplinaqteHoras.setForeground(new Color(38, 75, 150));
-		lblDisciplinaqteHoras.setBounds(378, 106, 80, 64);
-		lblDisciplinaqteHoras.setFont(new Font("Century Gothic", Font.BOLD, 20));
+		lblDisciplinaqteHoras.setBounds(20, 160, 80, 30);
+		lblDisciplinaqteHoras.setFont(new Font("Segoe UI", Font.BOLD, 14));
 		tabDisciplina.add(lblDisciplinaqteHoras);
 		
-		JLabel lblDisciplinacodCurso = new JLabel("<html>Cód. do<br>Curso<html>");
+		JLabel lblDisciplinacodCurso = new JLabel("Cód.Curso:");
+		lblDisciplinacodCurso.setToolTipText("Digite o Codigo do Curso. Ex.(01)");
 		lblDisciplinacodCurso.setForeground(new Color(38, 75, 150));
-		lblDisciplinacodCurso.setBounds(378, 173, 80, 64);
-		lblDisciplinacodCurso.setFont(new Font("Century Gothic", Font.BOLD, 20));
+		
+		lblDisciplinacodCurso.setBounds(190, 160, 90, 30);
+		lblDisciplinacodCurso.setFont(new Font("Segoe UI", Font.BOLD, 14));
 		tabDisciplina.add(lblDisciplinacodCurso);
 		
 		tfDisciplinaCod = new JTextField();
-		tfDisciplinaCod.setBounds(490, 72, 99, 33);
-		tfDisciplinaCod.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		tfDisciplinaCod.setBounds(100, 70, 80, 30);
+		tfDisciplinaCod.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tabDisciplina.add(tfDisciplinaCod);
 		tfDisciplinaCod.setColumns(10);
 		
 		tfDisciplinaNome = new JTextField();
-		tfDisciplinaNome.setBounds(94, 75, 274, 33);
-		tfDisciplinaNome.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		tfDisciplinaNome.setBounds(240, 70, 350, 30);
+		tfDisciplinaNome.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfDisciplinaNome.setColumns(10);
 		tabDisciplina.add(tfDisciplinaNome);
 		
 		tfDisciplinaDia = new JTextField();
-		tfDisciplinaDia.setBounds(94, 127, 274, 33);
-		tfDisciplinaDia.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		tfDisciplinaDia.setBounds(100, 115, 180, 30);
+		tfDisciplinaDia.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfDisciplinaDia.setColumns(10);
 		tabDisciplina.add(tfDisciplinaDia);
 		
 		tfDisciplinaHorario = new JTextField();
-		tfDisciplinaHorario.setBounds(94, 189, 274, 33);
-		tfDisciplinaHorario.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		tfDisciplinaHorario.setBounds(360, 115, 230, 30);
+		tfDisciplinaHorario.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfDisciplinaHorario.setColumns(10);
 		tabDisciplina.add(tfDisciplinaHorario);
 		
 		tfDisciplinaQteHoras = new JTextField();
-		tfDisciplinaQteHoras.setBounds(490, 124, 99, 33);
-		tfDisciplinaQteHoras.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		tfDisciplinaQteHoras.setBounds(100, 160, 80, 30);
+		tfDisciplinaQteHoras.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfDisciplinaQteHoras.setColumns(10);
 		tabDisciplina.add(tfDisciplinaQteHoras);
 		
-		JLabel lblDisciplina = new JLabel("DISCIPLINA");
+		JLabel lblDisciplina = new JLabel("Gerenciar Disciplina");
 		lblDisciplina.setForeground(new Color(38, 75, 150));
-		lblDisciplina.setBounds(10, 11, 173, 50);
-		lblDisciplina.setFont(new Font("Century Gothic", Font.BOLD, 30));
+		lblDisciplina.setBounds(20, 20, 260, 30);
+		lblDisciplina.setFont(new Font("Segoe UI", Font.BOLD, 24));
 		tabDisciplina.add(lblDisciplina);
 		
 		JButton btnDisciplinaBuscar = new JButton("BUSCAR");
 		btnDisciplinaBuscar.setForeground(new Color(255, 255, 255));
 		btnDisciplinaBuscar.setBackground(new Color(38, 75, 150));
-		btnDisciplinaBuscar.setFont(new Font("Century Gothic", Font.BOLD, 10));
-		btnDisciplinaBuscar.setBounds(490, 248, 99, 33);
+		btnDisciplinaBuscar.setFont(new Font("Segoe UI", Font.BOLD, 12));
+		btnDisciplinaBuscar.setBounds(480, 210, 110, 30);
 		tabDisciplina.add(btnDisciplinaBuscar);
 				
 		tfDisciplinaBuscar = new JTextField();
-		tfDisciplinaBuscar.setToolTipText("Digite o código do curso que deseja buscar");
-		tfDisciplinaBuscar.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		tfDisciplinaBuscar.setToolTipText("Digite o código do curso que deseja buscar:");
+		tfDisciplinaBuscar.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfDisciplinaBuscar.setColumns(10);
-		tfDisciplinaBuscar.setBounds(312, 248, 165, 33);
+		tfDisciplinaBuscar.setBounds(140, 210, 330, 30);
 		tabDisciplina.add(tfDisciplinaBuscar);
 		
 		JButton btnDisciplinaExcluir = new JButton("EXCLUIR");
-		btnDisciplinaExcluir.setBounds(10, 245, 99, 34);
+		btnDisciplinaExcluir.setBounds(20, 210, 110, 30);
 		tabDisciplina.add(btnDisciplinaExcluir);
 		btnDisciplinaExcluir.setForeground(Color.WHITE);
-		btnDisciplinaExcluir.setFont(new Font("Century Gothic", Font.BOLD, 13));
+		btnDisciplinaExcluir.setFont(new Font("Segoe UI", Font.BOLD, 12));
 		btnDisciplinaExcluir.setBackground(new Color(191, 33, 47));
 		
 		JButton btnDisciplinaSalvar = new JButton("SALVAR");
-		btnDisciplinaSalvar.setBounds(490, 11, 99, 38);
+		btnDisciplinaSalvar.setBounds(480, 20, 110, 35);
 		tabDisciplina.add(btnDisciplinaSalvar);
 		btnDisciplinaSalvar.setForeground(new Color(255, 255, 255));
 		btnDisciplinaSalvar.setBackground(new Color(39, 179, 118));
-		btnDisciplinaSalvar.setFont(new Font("Century Gothic", Font.BOLD, 15));
+		btnDisciplinaSalvar.setFont(new Font("Segoe UI", Font.BOLD, 12));
 		
 		tfDisciplinaCodCurso = new JTextField();
-		tfDisciplinaCodCurso.setBounds(490, 186, 99, 33);
-		tfDisciplinaCodCurso.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		tfDisciplinaCodCurso.setBounds(280, 160, 80, 30);
+		tfDisciplinaCodCurso.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfDisciplinaCodCurso.setColumns(10);
 		tabDisciplina.add(tfDisciplinaCodCurso);
 		
 		JScrollPane scrollPane_1 = new JScrollPane();
-		scrollPane_1.setBounds(10, 290, 579, 90);
+		scrollPane_1.setBounds(20, 250, 570, 135);
 		tabDisciplina.add(scrollPane_1);
 		
 		JTextArea taDisciplina = new JTextArea();
+		taDisciplina.setFont(new Font("Consolas", Font.PLAIN, 14));
 		scrollPane_1.setViewportView(taDisciplina);
 		
-		JLabel lblcodProcesso = new JLabel("<html>N°<br>do Processo<html>");
+		JLabel lblcodProcesso = new JLabel("N°do Processo:");
+		lblcodProcesso.setToolTipText("Número do Processo, guarde este número");
 		lblcodProcesso.setForeground(new Color(38, 75, 150));
-		lblcodProcesso.setFont(new Font("Century Gothic", Font.BOLD, 13));
-		lblcodProcesso.setBounds(312, 0, 99, 50);
+		lblcodProcesso.setFont(new Font("Segoe UI", Font.BOLD, 14));
+		lblcodProcesso.setBounds(390, 158, 120, 30);
 		tabDisciplina.add(lblcodProcesso);
 		
 		tfnumProcesso = new JTextField();
-		tfnumProcesso.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		tfnumProcesso.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfnumProcesso.setEditable(false);
 		tfnumProcesso.setColumns(10);
-		tfnumProcesso.setBounds(413, 11, 64, 33);
+		tfnumProcesso.setBounds(500, 160, 80, 30);
 		tabDisciplina.add(tfnumProcesso);
 		
 		DisciplinaController dC = new DisciplinaController(tfDisciplinaCod, tfDisciplinaNome, tfDisciplinaDia,
@@ -314,97 +328,102 @@ public class Tela extends JFrame {
 		
 		JPanel tabProfessor = new JPanel();
 		tabProfessor.setLayout(null);
-		tabProfessor.setToolTipText("Cadastro de professores");
+		tabProfessor.setToolTipText("Cadastro de professores:");
 		tabProfessor.setBackground(UIManager.getColor("Button.background"));
 		tabbedPane.addTab("Professor", null, tabProfessor, "Cadastro de Professores");
 		
-		JLabel lblProfessorNome = new JLabel("Nome");
+		JLabel lblProfessorNome = new JLabel("Nome:");
+		lblProfessorNome.setToolTipText("Digite o nome do Professor, sem acentuação");
 		lblProfessorNome.setForeground(new Color(38, 75, 150));
-		lblProfessorNome.setFont(new Font("Century Gothic", Font.BOLD, 20));
-		lblProfessorNome.setBounds(10, 72, 86, 38);
+		lblProfessorNome.setFont(new Font("Segoe UI", Font.BOLD, 14));
+		lblProfessorNome.setBounds(20, 70, 60, 30);
 		tabProfessor.add(lblProfessorNome);
 		
-		JLabel lblProfessorCPF = new JLabel("CPF");
+		JLabel lblProfessorCPF = new JLabel("CPF:");
+		lblProfessorCPF.setToolTipText("Digite o CPF do Professor. Ex.(000.000.000/00)");
 		lblProfessorCPF.setForeground(new Color(38, 75, 150));
-		lblProfessorCPF.setFont(new Font("Century Gothic", Font.BOLD, 20));
-		lblProfessorCPF.setBounds(353, 72, 86, 38);
+		lblProfessorCPF.setFont(new Font("Segoe UI", Font.BOLD, 14));
+		lblProfessorCPF.setBounds(380, 70, 40, 30);
 		tabProfessor.add(lblProfessorCPF);
 		
 		tfProfessorNome = new JTextField();
-		tfProfessorNome.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		tfProfessorNome.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfProfessorNome.setColumns(10);
-		tfProfessorNome.setBounds(96, 75, 247, 33);
+		tfProfessorNome.setBounds(80, 70, 280, 30);
 		tabProfessor.add(tfProfessorNome);
 		
 		tfProfessorCPF = new JTextField();
-		tfProfessorCPF.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		tfProfessorCPF.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfProfessorCPF.setColumns(10);
-		tfProfessorCPF.setBounds(402, 75, 187, 33);
+		tfProfessorCPF.setBounds(420, 70, 170, 30);
 		tabProfessor.add(tfProfessorCPF);
 		
 		tfProfessorArea = new JTextField();
-		tfProfessorArea.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		tfProfessorArea.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfProfessorArea.setColumns(10);
-		tfProfessorArea.setBounds(96, 121, 218, 33);
+		tfProfessorArea.setBounds(80, 115, 280, 30);
 		tabProfessor.add(tfProfessorArea);
 		
-		JLabel lblProfessor = new JLabel("PROFESSOR");
+		JLabel lblProfessor = new JLabel("Gerenciar Professores");
 		lblProfessor.setForeground(new Color(38, 75, 150));
-		lblProfessor.setFont(new Font("Century Gothic", Font.BOLD, 30));
-		lblProfessor.setBounds(10, 11, 185, 50);
+		lblProfessor.setFont(new Font("Segoe UI", Font.BOLD, 24));
+		lblProfessor.setBounds(20, 20, 300, 30);
 		tabProfessor.add(lblProfessor);
 		
 		JButton btnProfessorSalvar = new JButton("SALVAR");
 		btnProfessorSalvar.setForeground(Color.WHITE);
-		btnProfessorSalvar.setFont(new Font("Century Gothic", Font.BOLD, 15));
+		btnProfessorSalvar.setFont(new Font("Segoe UI", Font.BOLD, 12));
 		btnProfessorSalvar.setBackground(new Color(39, 179, 118));
-		btnProfessorSalvar.setBounds(490, 11, 99, 38);
+		btnProfessorSalvar.setBounds(480, 20, 110, 35);
 		tabProfessor.add(btnProfessorSalvar);
 		
 		JButton btnProfessorBuscar = new JButton("BUSCAR");
 		btnProfessorBuscar.setForeground(Color.WHITE);
-		btnProfessorBuscar.setFont(new Font("Century Gothic", Font.BOLD, 10));
+		btnProfessorBuscar.setFont(new Font("Segoe UI", Font.BOLD, 12));
 		btnProfessorBuscar.setBackground(new Color(38, 75, 150));
-		btnProfessorBuscar.setBounds(490, 163, 99, 35);
+		btnProfessorBuscar.setBounds(480, 160, 110, 30);
 		tabProfessor.add(btnProfessorBuscar);
 		
-		JLabel lblProfessorArea = new JLabel("Área");
+		JLabel lblProfessorArea = new JLabel("Área:");
+		lblProfessorArea.setToolTipText("Digite a Área que deseja atuar. Ex.(Tecnologia)");
 		lblProfessorArea.setForeground(new Color(38, 75, 150));
-		lblProfessorArea.setFont(new Font("Century Gothic", Font.BOLD, 20));
-		lblProfessorArea.setBounds(10, 120, 86, 38);
+		lblProfessorArea.setFont(new Font("Segoe UI", Font.BOLD, 14));
+		lblProfessorArea.setBounds(20, 115, 60, 30);
 		tabProfessor.add(lblProfessorArea);
 		
-		JLabel lblProfessorPontos = new JLabel("Pontos");
+		JLabel lblProfessorPontos = new JLabel("Pontos:");
+		lblProfessorPontos.setToolTipText("Digite os Pontos do Professor");
 		lblProfessorPontos.setForeground(new Color(38, 75, 150));
-		lblProfessorPontos.setFont(new Font("Century Gothic", Font.BOLD, 20));
-		lblProfessorPontos.setBounds(324, 118, 86, 38);
+		lblProfessorPontos.setFont(new Font("Segoe UI", Font.BOLD, 14));
+		lblProfessorPontos.setBounds(380, 115, 60, 30);
 		tabProfessor.add(lblProfessorPontos);
 		
 		tfProfessorPontos = new JTextField();
-		tfProfessorPontos.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		tfProfessorPontos.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfProfessorPontos.setColumns(10);
-		tfProfessorPontos.setBounds(402, 119, 187, 33);
+		tfProfessorPontos.setBounds(440, 115, 150, 30);
 		tabProfessor.add(tfProfessorPontos);
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(10, 207, 579, 173);
+		scrollPane.setBounds(20, 205, 570, 180);
 		tabProfessor.add(scrollPane);
 		
 		JTextArea taProfessor = new JTextArea();
+		taProfessor.setFont(new Font("Consolas", Font.PLAIN, 14));
 		scrollPane.setViewportView(taProfessor);
 		
 		tfProfessorBuscar = new JTextField();
-		tfProfessorBuscar.setToolTipText("Insira o CPF");
-		tfProfessorBuscar.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		tfProfessorBuscar.setToolTipText("Insira o CPF:");
+		tfProfessorBuscar.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfProfessorBuscar.setColumns(10);
-		tfProfessorBuscar.setBounds(250, 165, 230, 33);
+		tfProfessorBuscar.setBounds(140, 160, 330, 30);
 		tabProfessor.add(tfProfessorBuscar);
 		
 		JButton btnProfessorExcluir = new JButton("EXCLUIR");
 		btnProfessorExcluir.setForeground(Color.WHITE);
-		btnProfessorExcluir.setFont(new Font("Century Gothic", Font.BOLD, 13));
+		btnProfessorExcluir.setFont(new Font("Segoe UI", Font.BOLD, 12));
 		btnProfessorExcluir.setBackground(new Color(191, 33, 47));
-		btnProfessorExcluir.setBounds(10, 165, 99, 35);
+		btnProfessorExcluir.setBounds(20, 160, 110, 30);
 		tabProfessor.add(btnProfessorExcluir);
 		
 		ProfessorController pC = new ProfessorController(tfProfessorNome, tfProfessorCPF, tfProfessorArea, tfProfessorPontos, tfProfessorBuscar, taProfessor);
@@ -417,108 +436,113 @@ public class Tela extends JFrame {
 		tabbedPane.addTab("Inscrição", null, tabInscricao, "Inscrição para disciplina");
 		tabInscricao.setLayout(null);
 		
-		JLabel lblInscricao = new JLabel("INSCRIÇÃO");
+		JLabel lblInscricao = new JLabel("Nova Inscrição");
 		lblInscricao.setForeground(new Color(38, 75, 150));
-		lblInscricao.setFont(new Font("Century Gothic", Font.BOLD, 30));
-		lblInscricao.setBounds(10, 11, 185, 50);
+		lblInscricao.setFont(new Font("Segoe UI", Font.BOLD, 24));
+		lblInscricao.setBounds(20, 20, 200, 30);
 		tabInscricao.add(lblInscricao);
 		
-		JLabel lblInscricaoCPF = new JLabel("CPF");
+		JLabel lblInscricaoCPF = new JLabel("CPF Candidato:");
+		lblInscricaoCPF.setToolTipText("Digite o CPF do Candidato. Ex.(000.000.000/00)");
 		lblInscricaoCPF.setForeground(new Color(38, 75, 150));
-		lblInscricaoCPF.setFont(new Font("Century Gothic", Font.BOLD, 20));
-		lblInscricaoCPF.setBounds(10, 72, 55, 38);
+		lblInscricaoCPF.setFont(new Font("Segoe UI", Font.BOLD, 14));
+		lblInscricaoCPF.setBounds(20, 80, 120, 30);
 		tabInscricao.add(lblInscricaoCPF);
 		
-		JLabel lblInscricaoCodProcesso = new JLabel("<html>Cód.<br>do Processo<html>");
+		JLabel lblInscricaoCodProcesso = new JLabel("Cód.Processo:");
+		lblInscricaoCodProcesso.setToolTipText("Digite o Código do Processo");
 		lblInscricaoCodProcesso.setForeground(new Color(38, 75, 150));
-		lblInscricaoCodProcesso.setFont(new Font("Century Gothic", Font.BOLD, 20));
-		lblInscricaoCodProcesso.setBounds(10, 121, 140, 80);
+		lblInscricaoCodProcesso.setFont(new Font("Segoe UI", Font.BOLD, 14));
+		lblInscricaoCodProcesso.setBounds(20, 130, 120, 30);
 		tabInscricao.add(lblInscricaoCodProcesso);
 		
 		tfInscricaoCPF = new JTextField();
-		tfInscricaoCPF.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		tfInscricaoCPF.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfInscricaoCPF.setColumns(10);
-		tfInscricaoCPF.setBounds(75, 75, 514, 33);
+		tfInscricaoCPF.setBounds(150, 80, 440, 30);
 		tabInscricao.add(tfInscricaoCPF);
 		
 		tfInscricaoCodProcesso = new JTextField();
-		tfInscricaoCodProcesso.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		tfInscricaoCodProcesso.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfInscricaoCodProcesso.setColumns(10);
-		tfInscricaoCodProcesso.setBounds(160, 145, 429, 33);
+		tfInscricaoCodProcesso.setBounds(150, 130, 440, 30);
 		tabInscricao.add(tfInscricaoCodProcesso);
 		
 		JButton btnInscricaoBuscar = new JButton("BUSCAR");
 		btnInscricaoBuscar.setForeground(Color.WHITE);
-		btnInscricaoBuscar.setFont(new Font("Century Gothic", Font.BOLD, 10));
+		btnInscricaoBuscar.setFont(new Font("Segoe UI", Font.BOLD, 12));
 		btnInscricaoBuscar.setBackground(new Color(38, 75, 150));
-		btnInscricaoBuscar.setBounds(490, 212, 99, 33);
+		btnInscricaoBuscar.setBounds(480, 190, 110, 30);
 		tabInscricao.add(btnInscricaoBuscar);
 		
 		JButton btnInscricaoExcluir = new JButton("EXCLUIR");
 		btnInscricaoExcluir.setForeground(Color.WHITE);
-		btnInscricaoExcluir.setFont(new Font("Century Gothic", Font.BOLD, 13));
+		btnInscricaoExcluir.setFont(new Font("Segoe UI", Font.BOLD, 12));
 		btnInscricaoExcluir.setBackground(new Color(191, 33, 47));
-		btnInscricaoExcluir.setBounds(10, 207, 99, 38);
+		btnInscricaoExcluir.setBounds(20, 190, 110, 30);
 		tabInscricao.add(btnInscricaoExcluir);
 		
 		JButton btnInscricaoSalvar = new JButton("SALVAR");
 		btnInscricaoSalvar.setForeground(Color.WHITE);
-		btnInscricaoSalvar.setFont(new Font("Century Gothic", Font.BOLD, 15));
+		btnInscricaoSalvar.setFont(new Font("Segoe UI", Font.BOLD, 12));
 		btnInscricaoSalvar.setBackground(new Color(39, 179, 118));
-		btnInscricaoSalvar.setBounds(490, 11, 99, 38);
+		btnInscricaoSalvar.setBounds(480, 20, 110, 35);
 		tabInscricao.add(btnInscricaoSalvar);
 		
 		tfInscricaoBuscar = new JTextField();
-		tfInscricaoBuscar.setToolTipText("Digite o CPF do candidato que desjeja buscar");
-		tfInscricaoBuscar.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		tfInscricaoBuscar.setToolTipText("Digite o CPF do candidato que deseja buscar:");
+		tfInscricaoBuscar.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfInscricaoBuscar.setColumns(10);
-		tfInscricaoBuscar.setBounds(315, 212, 165, 33);
+		tfInscricaoBuscar.setBounds(140, 190, 330, 30);
 		tabInscricao.add(tfInscricaoBuscar);
 		
 		JScrollPane scrollPane_5 = new JScrollPane();
-		scrollPane_5.setBounds(10, 256, 579, 124);
+		scrollPane_5.setBounds(20, 235, 570, 150);
 		tabInscricao.add(scrollPane_5);
 		
 		JTextArea taInscricao = new JTextArea();
+		taInscricao.setFont(new Font("Consolas", Font.PLAIN, 14));
 		scrollPane_5.setViewportView(taInscricao);
-		
 		
 		JPanel tabConsultaInscritos = new JPanel();
 		tabbedPane.addTab("Consultar Inscritos", null, tabConsultaInscritos, "Consulte os inscritos de uma disciplina");
 		tabConsultaInscritos.setLayout(null);
 		
-		JLabel lblConsultarInscritos = new JLabel("CONSULTAR INSCRITOS");
+		JLabel lblConsultarInscritos = new JLabel("Consultar Inscritos por Disciplina");
 		lblConsultarInscritos.setForeground(new Color(38, 75, 150));
-		lblConsultarInscritos.setFont(new Font("Century Gothic", Font.BOLD, 30));
-		lblConsultarInscritos.setBounds(10, 11, 400, 50);
+		lblConsultarInscritos.setFont(new Font("Segoe UI", Font.BOLD, 24));
+		lblConsultarInscritos.setBounds(20, 20, 400, 30);
 		tabConsultaInscritos.add(lblConsultarInscritos);
 		
 		tfConsultarInscritosBuscar = new JTextField();
-		tfConsultarInscritosBuscar.setToolTipText("Digite o código da disciplina que deseja buscar");
-		tfConsultarInscritosBuscar.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		tfConsultarInscritosBuscar.setToolTipText("Digite o código da disciplina que deseja buscar. Ex. (01)");
+		tfConsultarInscritosBuscar.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfConsultarInscritosBuscar.setColumns(10);
-		tfConsultarInscritosBuscar.setBounds(315, 72, 165, 33);
+		tfConsultarInscritosBuscar.setBounds(310, 70, 160, 30);
 		tabConsultaInscritos.add(tfConsultarInscritosBuscar);
 		
 		JButton btnConsultarInscritos = new JButton("BUSCAR");
 		btnConsultarInscritos.setForeground(Color.WHITE);
-		btnConsultarInscritos.setFont(new Font("Century Gothic", Font.BOLD, 10));
+		btnConsultarInscritos.setFont(new Font("Segoe UI", Font.BOLD, 12));
 		btnConsultarInscritos.setBackground(new Color(38, 75, 150));
-		btnConsultarInscritos.setBounds(490, 72, 99, 33);
+		btnConsultarInscritos.setBounds(480, 70, 110, 30);
 		tabConsultaInscritos.add(btnConsultarInscritos);
 		
 		tfDisciplinaConsultada = new JTextField();
-		tfDisciplinaConsultada.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		tfDisciplinaConsultada.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfDisciplinaConsultada.setColumns(10);
-		tfDisciplinaConsultada.setBounds(10, 72, 295, 33);
+		tfDisciplinaConsultada.setBounds(20, 70, 280, 30);
 		tfDisciplinaConsultada.setEditable(false);
 		tabConsultaInscritos.add(tfDisciplinaConsultada);
 
-		JTextArea taConsultarInscritos = new JTextArea(); 
-		
 		JScrollPane scrollPane_4 = new JScrollPane();
-		scrollPane_4.setBounds(10, 116, 579, 264);
+		scrollPane_4.setBounds(20, 115, 570, 270);
 		tabConsultaInscritos.add(scrollPane_4);
+
+		JTextArea taConsultarInscritos = new JTextArea();
+		taConsultarInscritos.setFont(new Font("Consolas", Font.PLAIN, 14));
+		scrollPane_4.setViewportView(taConsultarInscritos);
+
 
 		scrollPane_4.setViewportView(taConsultarInscritos);
 
@@ -528,38 +552,39 @@ public class Tela extends JFrame {
 		tabbedPane.addTab("Consultar Disciplinas", null, tabConsultaDisciplinas, "Consulte as disciplinas de um curso");
 		tabConsultaDisciplinas.setLayout(null);
 		
-		JLabel lblConsultarDisciplinas = new JLabel("CONSULTAR DISCIPLINAS");
+		JLabel lblConsultarDisciplinas = new JLabel("Consultar Disciplinas");
 		lblConsultarDisciplinas.setForeground(new Color(38, 75, 150));
-		lblConsultarDisciplinas.setFont(new Font("Century Gothic", Font.BOLD, 30));
-		lblConsultarDisciplinas.setBounds(10, 11, 400, 50);
+		lblConsultarDisciplinas.setFont(new Font("Segoe UI", Font.BOLD, 24));
+		lblConsultarDisciplinas.setBounds(20, 20, 400, 30);
 		tabConsultaDisciplinas.add(lblConsultarDisciplinas);
 		
 		tfCursoConsultado = new JTextField();
-		tfCursoConsultado.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		tfCursoConsultado.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfCursoConsultado.setEditable(false);
 		tfCursoConsultado.setColumns(10);
-		tfCursoConsultado.setBounds(10, 72, 295, 33);
+		tfCursoConsultado.setBounds(20, 70, 280, 30);
 		tabConsultaDisciplinas.add(tfCursoConsultado);
 		
 		tfConsultarCursoBuscar = new JTextField();
-		tfConsultarCursoBuscar.setToolTipText("Digite o código do curso que deseja buscar");
-		tfConsultarCursoBuscar.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		tfConsultarCursoBuscar.setToolTipText("Digite o código do Curso que deseja buscar");
+		tfConsultarCursoBuscar.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfConsultarCursoBuscar.setColumns(10);
-		tfConsultarCursoBuscar.setBounds(315, 72, 165, 33);
+		tfConsultarCursoBuscar.setBounds(310, 70, 160, 30);
 		tabConsultaDisciplinas.add(tfConsultarCursoBuscar);
 		
 		JButton btnConsultarDisciplinas = new JButton("BUSCAR");
 		btnConsultarDisciplinas.setForeground(Color.WHITE);
-		btnConsultarDisciplinas.setFont(new Font("Century Gothic", Font.BOLD, 10));
+		btnConsultarDisciplinas.setFont(new Font("Segoe UI", Font.BOLD, 12));
 		btnConsultarDisciplinas.setBackground(new Color(38, 75, 150));
-		btnConsultarDisciplinas.setBounds(490, 72, 99, 33);
+		btnConsultarDisciplinas.setBounds(480, 70, 110, 30);
 		tabConsultaDisciplinas.add(btnConsultarDisciplinas);
 		
 		JScrollPane scrollPane_3 = new JScrollPane();
-		scrollPane_3.setBounds(10, 116, 579, 264);
+		scrollPane_3.setBounds(20, 115, 570, 270);
 		tabConsultaDisciplinas.add(scrollPane_3);
 		
 		JTextArea taConsultarDisciplinas = new JTextArea();
+		taConsultarDisciplinas.setFont(new Font("Consolas", Font.PLAIN, 14));
 		scrollPane_3.setViewportView(taConsultarDisciplinas);
 		
 		ConsultarDisciplinasController cdc = new ConsultarDisciplinasController(tfCursoConsultado, tfConsultarCursoBuscar, taConsultarDisciplinas);
@@ -568,9 +593,9 @@ public class Tela extends JFrame {
 		
 		JButton btnInscricaoNovo = new JButton("NOVO +");
 		btnInscricaoNovo.setForeground(Color.WHITE);
-		btnInscricaoNovo.setFont(new Font("Century Gothic", Font.BOLD, 15));
+		btnInscricaoNovo.setFont(new Font("Segoe UI", Font.BOLD, 12));
 		btnInscricaoNovo.setBackground(new Color(38, 75, 150));
-		btnInscricaoNovo.setBounds(381, 11, 99, 38);
+		btnInscricaoNovo.setBounds(360, 20, 110, 35);
 		tabInscricao.add(btnInscricaoNovo);
 
 		btnInscricaoSalvar.addActionListener(iC);
