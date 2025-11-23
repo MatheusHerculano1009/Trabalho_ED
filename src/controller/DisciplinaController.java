@@ -169,7 +169,7 @@ public class DisciplinaController implements ActionListener {
 					tfDisciplinaNome.setText(d.getNome());
 					tfDisciplinaDia.setText(d.getDia());
 					tfDisciplinaHorario.setText(d.getHorario());
-					tfDisciplinaQteHoras.setText(String.valueOf(d.getQteHoras())); // Converte int
+					tfDisciplinaQteHoras.setText(String.valueOf(d.getQteHoras()));
 					tfDisciplinaCodCurso.setText(d.getCodCurso());
 					tfnumProcesso.setText(Integer.toString(d.getCodProcesso()));
 					this.disciplinaEmEdicao = d;
