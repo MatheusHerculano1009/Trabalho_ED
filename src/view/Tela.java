@@ -94,12 +94,14 @@ public class Tela extends JFrame {
 			tabCurso.add(lblCursoNome);
 			
 			tfCursoNome = new JTextField();
+			tfCursoNome.setToolTipText("Digite o nome do Curso, sem acentuação.");
 			tfCursoNome.setBounds(80, 115, 510, 30);
 			tfCursoNome.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 			tfCursoNome.setColumns(10);
 			tabCurso.add(tfCursoNome);
 			
 			tfCursoCod = new JTextField();
+			tfCursoCod.setToolTipText("Digite o código do Curso. Ex.(01)");
 			tfCursoCod.setBounds(80, 70, 100, 30);
 			tfCursoCod.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 			tfCursoCod.setColumns(10);
@@ -145,6 +147,7 @@ public class Tela extends JFrame {
 			tabCurso.add(lblCursoArea);
 			
 			tfCursoArea = new JTextField();
+			tfCursoArea.setToolTipText("Digite a Área de atuação do seu Curso. Ex. (Tecnologia)");
 			tfCursoArea.setBounds(250, 70, 340, 30);
 			tfCursoArea.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 			tfCursoArea.setColumns(10);
@@ -227,30 +230,35 @@ public class Tela extends JFrame {
 		tabDisciplina.add(lblDisciplinacodCurso);
 		
 		tfDisciplinaCod = new JTextField();
+		tfDisciplinaCod.setToolTipText("Digite o Código da Disciplina. Ex.(01)");
 		tfDisciplinaCod.setBounds(100, 70, 80, 30);
 		tfDisciplinaCod.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tabDisciplina.add(tfDisciplinaCod);
 		tfDisciplinaCod.setColumns(10);
 		
 		tfDisciplinaNome = new JTextField();
+		tfDisciplinaNome.setToolTipText("Digite o Nome da Disciplina. Ex.(Contabilidade)");
 		tfDisciplinaNome.setBounds(240, 70, 350, 30);
 		tfDisciplinaNome.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfDisciplinaNome.setColumns(10);
 		tabDisciplina.add(tfDisciplinaNome);
 		
 		tfDisciplinaDia = new JTextField();
+		tfDisciplinaDia.setToolTipText("Digite o Dia da Semana que será ministrada a Aula. Ex.(Segunda-Feira)");
 		tfDisciplinaDia.setBounds(100, 115, 180, 30);
 		tfDisciplinaDia.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfDisciplinaDia.setColumns(10);
 		tabDisciplina.add(tfDisciplinaDia);
 		
 		tfDisciplinaHorario = new JTextField();
+		tfDisciplinaHorario.setToolTipText("Digite o Horário Inicial da Disciplina. Ex.(19:20)");
 		tfDisciplinaHorario.setBounds(360, 115, 230, 30);
 		tfDisciplinaHorario.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfDisciplinaHorario.setColumns(10);
 		tabDisciplina.add(tfDisciplinaHorario);
 		
 		tfDisciplinaQteHoras = new JTextField();
+		tfDisciplinaQteHoras.setToolTipText("Digite a Carga Horária Diaria da Disciplina. Ex.(4)");
 		tfDisciplinaQteHoras.setBounds(100, 160, 80, 30);
 		tfDisciplinaQteHoras.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfDisciplinaQteHoras.setColumns(10);
@@ -291,6 +299,7 @@ public class Tela extends JFrame {
 		btnDisciplinaSalvar.setFont(new Font("Segoe UI", Font.BOLD, 12));
 		
 		tfDisciplinaCodCurso = new JTextField();
+		tfDisciplinaCodCurso.setToolTipText("Digite o código do curso. Ex.(01)");
 		tfDisciplinaCodCurso.setBounds(280, 160, 80, 30);
 		tfDisciplinaCodCurso.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfDisciplinaCodCurso.setColumns(10);
@@ -347,18 +356,21 @@ public class Tela extends JFrame {
 		tabProfessor.add(lblProfessorCPF);
 		
 		tfProfessorNome = new JTextField();
+		tfProfessorNome.setToolTipText("Digite o nome do Professor, sem acentuação");
 		tfProfessorNome.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfProfessorNome.setColumns(10);
 		tfProfessorNome.setBounds(80, 70, 280, 30);
 		tabProfessor.add(tfProfessorNome);
 		
 		tfProfessorCPF = new JTextField();
+		tfProfessorCPF.setToolTipText("Digite o CPF do Professor. Ex.(000.000.000/00)");
 		tfProfessorCPF.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfProfessorCPF.setColumns(10);
 		tfProfessorCPF.setBounds(420, 70, 170, 30);
 		tabProfessor.add(tfProfessorCPF);
 		
 		tfProfessorArea = new JTextField();
+		tfProfessorArea.setToolTipText("Digite a Área de atuação. Ex.(Tecnologia)");
 		tfProfessorArea.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfProfessorArea.setColumns(10);
 		tfProfessorArea.setBounds(80, 115, 280, 30);
@@ -399,6 +411,7 @@ public class Tela extends JFrame {
 		tabProfessor.add(lblProfessorPontos);
 		
 		tfProfessorPontos = new JTextField();
+		tfProfessorPontos.setToolTipText("Digite a pontuação atual do professor");
 		tfProfessorPontos.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfProfessorPontos.setColumns(10);
 		tfProfessorPontos.setBounds(440, 115, 150, 30);
@@ -437,6 +450,7 @@ public class Tela extends JFrame {
 		tabInscricao.setLayout(null);
 		
 		JLabel lblInscricao = new JLabel("Nova Inscrição");
+		lblInscricao.setToolTipText("Cadastro de Inscrição");
 		lblInscricao.setForeground(new Color(38, 75, 150));
 		lblInscricao.setFont(new Font("Segoe UI", Font.BOLD, 24));
 		lblInscricao.setBounds(20, 20, 200, 30);
@@ -457,12 +471,14 @@ public class Tela extends JFrame {
 		tabInscricao.add(lblInscricaoCodProcesso);
 		
 		tfInscricaoCPF = new JTextField();
+		tfInscricaoCPF.setToolTipText("Digite o CPF do Candidato. Ex.(000.000.000/00)");
 		tfInscricaoCPF.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfInscricaoCPF.setColumns(10);
 		tfInscricaoCPF.setBounds(150, 80, 440, 30);
 		tabInscricao.add(tfInscricaoCPF);
 		
 		tfInscricaoCodProcesso = new JTextField();
+		tfInscricaoCodProcesso.setToolTipText("Digite o Código do Processo Seletivo");
 		tfInscricaoCodProcesso.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfInscricaoCodProcesso.setColumns(10);
 		tfInscricaoCodProcesso.setBounds(150, 130, 440, 30);

@@ -19,7 +19,9 @@ import model.Inscricao;
 import model.Professor;
 
 public class InscricaoController implements ActionListener {
-
+	
+	public static InscricaoController controladorPrincipal;
+	
 	private JTextField tfInscricaoCPF;
 	private JTextField tfInscricaoCodProcesso;
 	private JTextField tfInscricaoBuscar;
@@ -38,6 +40,8 @@ public class InscricaoController implements ActionListener {
 		this.taInscricao = taInscricao;
 
 		carregarEstruturas();
+		
+		controladorPrincipal = this;
 	}
 
 	private void carregarEstruturas() {
@@ -240,6 +244,24 @@ public class InscricaoController implements ActionListener {
 			}
 		}
 	}
+	
+	public void excluirInscricoesPorDisciplina(String codDisciplina) throws Exception {
+        boolean removeu = false;
+        int tamanho = listaInscricoes.size();
+        
+        for (int i = tamanho - 1; i >= 0; i--) {
+            Inscricao insc = listaInscricoes.get(i);
+            if (insc.getCodDisciplina().equals(codDisciplina)) {
+                listaInscricoes.remove(i);
+                removeu = true;
+            }
+        }
+        
+        if (removeu) {
+            regravarArquivos(); 
+            System.out.println("Inscrições da disciplina " + codDisciplina + " foram excluídas.");
+        }
+    }
 
 	private void regravarArquivos() throws Exception {
 		if (!dir.exists()) {

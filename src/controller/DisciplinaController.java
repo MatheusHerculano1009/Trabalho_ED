@@ -280,6 +280,11 @@ public class DisciplinaController implements ActionListener {
 					if (!existe) {
 						taDisciplina.setText("Não há registro dessa disciplina!");
 					} else {
+
+                        if (InscricaoController.controladorPrincipal != null) {
+                            InscricaoController.controladorPrincipal.excluirInscricoesPorDisciplina(cod);
+                        }
+
 						regravarArquivos();
 						taDisciplina.setText("Disciplina removida com sucesso");
 					}
