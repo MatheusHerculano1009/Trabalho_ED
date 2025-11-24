@@ -278,7 +278,7 @@ public class Tela extends JFrame {
 		tabDisciplina.add(btnDisciplinaBuscar);
 				
 		tfDisciplinaBuscar = new JTextField();
-		tfDisciplinaBuscar.setToolTipText("Digite o código do curso que deseja buscar:");
+		tfDisciplinaBuscar.setToolTipText("Digite o código da disciplina que deseja buscar:");
 		tfDisciplinaBuscar.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		tfDisciplinaBuscar.setColumns(10);
 		tfDisciplinaBuscar.setBounds(140, 210, 330, 30);
