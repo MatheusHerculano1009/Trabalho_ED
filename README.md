@@ -1,0 +1,6 @@
+Integrantes do projeto:
+
+- Matheus dos Santos Herculano
+- João Vitor Dantas de Oliveira
+- João Paulo Alves Carvalho
+- Miguel da Silva Duarte
