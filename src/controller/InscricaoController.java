@@ -286,5 +286,4 @@ public class InscricaoController implements ActionListener {
 		tfInscricaoBuscar.setText("");
 		this.inscricaoEmEdicao = null;
 	}
-
 }
